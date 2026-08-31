@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Course19
+{
+    public class clsUI
+    {
+        static public void MauseEnterLeave(Control control, int width,int hight)
+        {
+            control.Height = hight;
+            control.Width=width;
+        }
+     
+
+        static public string ImagePath { set; get; }
+    }
+}

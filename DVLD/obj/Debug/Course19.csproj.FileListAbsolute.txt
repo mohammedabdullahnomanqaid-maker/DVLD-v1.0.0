@@ -1,0 +1,11 @@
+C:\Users\pc shamel\source\repos\Course19\bin\Debug\Course19.exe.config
+C:\Users\pc shamel\source\repos\Course19\bin\Debug\Course19.exe
+C:\Users\pc shamel\source\repos\Course19\bin\Debug\Course19.pdb
+C:\Users\pc shamel\source\repos\Course19\obj\Debug\Course19.csproj.AssemblyReference.cache
+C:\Users\pc shamel\source\repos\Course19\obj\Debug\Course19.Properties.Resources.resources
+C:\Users\pc shamel\source\repos\Course19\obj\Debug\Course19.csproj.GenerateResource.cache
+C:\Users\pc shamel\source\repos\Course19\obj\Debug\Course19.csproj.CoreCompileInputs.cache
+C:\Users\pc shamel\source\repos\Course19\obj\Debug\Course19.exe
+C:\Users\pc shamel\source\repos\Course19\obj\Debug\Course19.pdb
+C:\Users\pc shamel\source\repos\Course19\obj\Debug\Course19.frmPeople.resources
+C:\Users\pc shamel\source\repos\Course19\obj\Debug\Course19.frmDashboard.resources
