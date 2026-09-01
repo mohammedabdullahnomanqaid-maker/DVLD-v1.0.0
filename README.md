@@ -21,9 +21,30 @@ A desktop application developed with **C# and .NET Framework**, designed to mana
 [🎯 Goals](#-project-goals) ·
 [✨ Features](#-key-features) ·
 [🏗️ Architecture](#️-architecture) ·
+[🖥️ Screenshots](#️-screenshots) ·
 [🛠️ Technologies](#️-technologies) ·
 [📂 Structure](#-project-structure) ·
 [🚀 Setup](#-getting-started)
+
+</div>
+
+---
+
+<div align="center">
+
+## 🖥️ Application Preview
+
+<img src="Screenshots/Dashboard-Screen.png" alt="DVLD Dashboard" width="92%">
+
+<br>
+
+### DVLD Dashboard
+
+The main dashboard provides access to the core areas of the DVLD system.
+
+<br>
+
+[📸 View All Screenshots](Screenshots)
 
 </div>
 
@@ -390,6 +411,102 @@ This design prevents database operations from being directly mixed with the Pres
 
 ---
 
+# 🖥️ Screenshots
+
+Explore the main interfaces of the DVLD application.
+
+<div align="center">
+
+### 📊 Dashboard
+
+<img src="Screenshots/Dashboard-Screen.png" alt="DVLD Dashboard" width="92%">
+
+<br>
+
+<sub><b>Main Dashboard</b> — Central interface for navigating the system.</sub>
+
+</div>
+
+<br>
+
+<table>
+<tr>
+<td width="50%" align="center">
+
+### 🔐 Login
+
+<img src="Screenshots/Login-Screen.png" alt="DVLD Login Screen" width="100%">
+
+<sub>Application login interface.</sub>
+
+</td>
+
+<td width="50%" align="center">
+
+### 👤 Current User
+
+<img src="Screenshots/Current-User-Screen.png" alt="DVLD Current User" width="100%">
+
+<sub>Current user information.</sub>
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" align="center">
+
+### 📋 Dashboard Features
+
+<img src="Screenshots/Dashboard-Feature.png" alt="DVLD Dashboard Features" width="100%">
+
+<sub>Dashboard functionality and navigation.</sub>
+
+</td>
+
+<td width="50%" align="center">
+
+### 🪪 Local Driving License
+
+<img src="Screenshots/Local-Driving-License.png" alt="DVLD Local Driving License" width="100%">
+
+<sub>Local driving license interface.</sub>
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" align="center">
+
+### 🌍 International License
+
+<img src="Screenshots/International_License.png" alt="DVLD International License" width="100%">
+
+<sub>International license interface.</sub>
+
+</td>
+
+<td width="50%" align="center">
+
+### 🧪 Test Types
+
+<img src="Screenshots/Manage-Test-Type-Screen.png" alt="DVLD Manage Test Types" width="100%">
+
+<sub>Test type management interface.</sub>
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<div align="center">
+
+📸 **[View the complete Screenshots Gallery](Screenshots)**
+
+</div>
+
+---
+
 # 🛠️ Technologies
 
 | Technology | Purpose |
@@ -512,6 +629,15 @@ DVLD-v1.0.0/
 │   ├── 📄 clsTestTypesData.cs
 │   ├── 📄 clsUserData.cs
 │   └── 📄 DataAccessLayer.csproj
+│
+├── 📁 Screenshots/
+│   ├── 🖼️ Current-User-Screen.png
+│   ├── 🖼️ Dashboard-Feature.png
+│   ├── 🖼️ Dashboard-Screen.png
+│   ├── 🖼️ International_License.png
+│   ├── 🖼️ Local-Driving-License.png
+│   ├── 🖼️ Login-Screen.png
+│   └── 🖼️ Manage-Test-Type-Screen.png
 │
 ├── 📄 DVLD.sln
 └── 📄 .gitignore
