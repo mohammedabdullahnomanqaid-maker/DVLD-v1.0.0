@@ -1,97 +1,81 @@
-🚗 DVLD — Driving & Vehicle License Department
+<div align="center">
 
-«A desktop-based Driving & Vehicle License Department Management System built with C# and .NET, following a layered architecture to organize presentation, business logic, and data access.»
+# 🚗 DVLD
 
-"C#" (https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
-".NET" (https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-"WinForms" (https://img.shields.io/badge/WinForms-512BD4?style=for-the-badge&logo=windows&logoColor=white)
-"SQL Server" (https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
-"OOP" (https://img.shields.io/badge/OOP-Design-blue?style=for-the-badge)
-"Architecture" (https://img.shields.io/badge/Architecture-3--Tier-success?style=for-the-badge)
+### Driving & Vehicle License Department
 
----
+A desktop management system built with **C# and .NET**, designed with a **layered architecture** that separates the Presentation, Business Logic, and Data Access responsibilities.
 
-📌 Overview
+<br>
 
-DVLD (Driving & Vehicle License Department) is a desktop management system developed using C# and .NET.
+[![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white)](https://learn.microsoft.com/dotnet/csharp/)
+[![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![WinForms](https://img.shields.io/badge/WinForms-512BD4?style=flat-square&logo=windows&logoColor=white)](https://learn.microsoft.com/dotnet/desktop/winforms/)
+[![OOP](https://img.shields.io/badge/OOP-Design-0A66C2?style=flat-square)](#)
+[![Architecture](https://img.shields.io/badge/Architecture-3--Tier-success?style=flat-square)](#)
 
-The project is designed around a layered architecture, separating the application's responsibilities into independent layers:
+<br>
 
-- 🎨 Presentation Layer
-- 🧠 Business Logic Layer
-- 💾 Data Access Layer
+[📖 Overview](#-overview) ·
+[🏗️ Architecture](#️-architecture) ·
+[🧩 Modules](#-system-modules) ·
+[🗂️ Structure](#️-project-structure) ·
+[🚀 Getting Started](#-getting-started)
 
-This separation makes the application easier to understand, maintain, extend, and debug while keeping the responsibilities of each layer clearly defined.
-
-The current repository is organized as a Visual Studio solution containing the three main application layers.
-
----
-
-✨ Core Modules
-
-The project contains several modules representing the main operations of a driving-license management system.
-
-👤 People Management
-
-Handles information related to people within the system.
-
-Relevant implementation exists in both the Presentation and Business/Data Access layers.
-
-👨‍💼 Users
-
-Provides functionality related to system users and user data.
-
-The project contains dedicated business and data-access classes for users.
-
-🚘 Drivers
-
-Contains functionality related to driver records and driver management.
-
-🪪 Local Driving License Applications
-
-Provides the application's domain and data-access components for local driving-license applications.
-
-🌍 International Licenses
-
-Includes dedicated classes for handling international driving-license functionality.
-
-📝 Tests & Test Appointments
-
-The system contains modules for:
-
-- Test types
-- Tests
-- Test appointments
-
-These components are represented across the business and data-access layers.
-
-📄 Licenses & License Classes
-
-The project includes dedicated components for:
-
-- Licenses
-- License classes
-- International licenses
+</div>
 
 ---
 
-🏗️ Architecture
+## 📌 Overview
 
-The project follows a 3-Tier / Layered Architecture:
+**DVLD (Driving & Vehicle License Department)** is a desktop management system developed using **C# and .NET**.
 
-┌──────────────────────────────────────────┐
-│          Presentation Layer              │
-│              DVLD                        │
-│                                          │
-│  Forms • UI • User Interaction           │
-└────────────────────┬─────────────────────┘
-                     │
-                     ▼
-┌──────────────────────────────────────────┐
-│        Business Logic Layer              │
-│        DVLD_BussinseLayer                │
-│                                          │
-│  Business Rules • Validation • Logic     │
+The project is designed around a **3-Tier / Layered Architecture**, separating the application's responsibilities into three main layers:
+
+- 🎨 **Presentation Layer** — User interface and user interaction
+- 🧠 **Business Logic Layer** — Business rules and application logic
+- 💾 **Data Access Layer** — Database communication and data operations
+
+This separation of responsibilities helps keep the application organized, maintainable, and easier to extend.
+
+---
+
+## ✨ System Modules
+
+The application is organized into several functional areas related to driving and vehicle license management.
+
+| Module | Description |
+|:--|:--|
+| 👤 **People** | Manage people-related information |
+| 👥 **Users** | Manage system users |
+| 🚘 **Drivers** | Manage driver records |
+| 📋 **Applications** | Manage application-related operations |
+| 🪪 **Licenses** | Manage driving licenses and license classes |
+| 🌍 **International Licenses** | Handle international license operations |
+| 📝 **Tests** | Manage tests and test appointments |
+| 🔐 **Login** | Application login and access entry |
+| 🌐 **Countries** | Manage country-related data |
+
+---
+
+## 🏗️ Architecture
+
+The project follows a **3-Tier / Layered Architecture**.
+
+```mermaid
+flowchart TD
+
+    UI["🎨 Presentation Layer<br/>DVLD"]
+
+    BL["🧠 Business Logic Layer<br/>DVLD_BussinseLayer"]
+
+    DAL["💾 Data Access Layer<br/>DVLD_DataAccessLayer"]
+
+    DB[("🗄️ Database")]
+
+    UI --> BL
+    BL --> DAL
+    DAL --> DB│  Business Rules • Validation • Logic     │
 └────────────────────┬─────────────────────┘
                      │
                      ▼
