@@ -25,6 +25,7 @@ A desktop application developed with **C# and .NET Framework**, designed to mana
 [🛠️ Technologies](#️-technologies) ·
 [📂 Structure](#-project-structure) ·
 [🚀 Setup](#-getting-started)
+<a href="#-timeline">📅 Timeline</a>
 
 </div>
 
@@ -733,6 +734,14 @@ DVLD
 ```
 
 as the startup project and run the application.
+
+---
+
+## 📅 Timeline
+
+| Version | Start Date | End Date | Language |
+|:---:|:---:|:---:|:---:|
+| **v1.0.0** | 2026/07/04 | 2026/08/04 | C# |
 
 ---
 
