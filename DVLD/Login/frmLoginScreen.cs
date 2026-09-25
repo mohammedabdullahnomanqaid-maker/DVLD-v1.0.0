@@ -70,10 +70,6 @@ namespace Course19
            
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-          
-        }
 
         private void frmLoginScreen_Load(object sender, EventArgs e)
         {

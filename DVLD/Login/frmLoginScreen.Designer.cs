@@ -133,7 +133,6 @@ namespace Course19
             this.chkRemeberMe.TabIndex = 9;
             this.chkRemeberMe.Text = "remeber me";
             this.chkRemeberMe.UseVisualStyleBackColor = false;
-            this.chkRemeberMe.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // pictureBox2
             // 

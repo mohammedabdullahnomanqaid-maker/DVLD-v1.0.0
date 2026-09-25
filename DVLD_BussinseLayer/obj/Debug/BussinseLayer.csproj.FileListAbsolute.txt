@@ -16,3 +16,12 @@ C:\Users\pc shamel\source\DVLD\DVLD_BussinseLayer\bin\Debug\clsBussinseLayer.pdb
 C:\Users\pc shamel\source\DVLD\DVLD_BussinseLayer\bin\Debug\DataAccessLayer.dll
 C:\Users\pc shamel\source\DVLD\DVLD_BussinseLayer\bin\Debug\DataAccessLayer.pdb
 C:\Users\pc shamel\source\DVLD\DVLD_BussinseLayer\obj\Debug\BussinseLayer.csproj.CopyComplete
+C:\Users\pc shamel\Source\Repos\DVLD-v1.0.0\DVLD_BussinseLayer\bin\Debug\clsBussinseLayer.dll
+C:\Users\pc shamel\Source\Repos\DVLD-v1.0.0\DVLD_BussinseLayer\bin\Debug\clsBussinseLayer.pdb
+C:\Users\pc shamel\Source\Repos\DVLD-v1.0.0\DVLD_BussinseLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\pc shamel\Source\Repos\DVLD-v1.0.0\DVLD_BussinseLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\pc shamel\Source\Repos\DVLD-v1.0.0\DVLD_BussinseLayer\obj\Debug\BussinseLayer.csproj.AssemblyReference.cache
+C:\Users\pc shamel\Source\Repos\DVLD-v1.0.0\DVLD_BussinseLayer\obj\Debug\BussinseLayer.csproj.CoreCompileInputs.cache
+C:\Users\pc shamel\Source\Repos\DVLD-v1.0.0\DVLD_BussinseLayer\obj\Debug\BussinseLayer.csproj.CopyComplete
+C:\Users\pc shamel\Source\Repos\DVLD-v1.0.0\DVLD_BussinseLayer\obj\Debug\clsBussinseLayer.dll
+C:\Users\pc shamel\Source\Repos\DVLD-v1.0.0\DVLD_BussinseLayer\obj\Debug\clsBussinseLayer.pdb
