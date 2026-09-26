@@ -30,10 +30,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t Error in GetAllDetaind \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -73,10 +70,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError in AddNewDetainLicense \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -105,10 +99,7 @@ namespace DataAccessLayer
                 catch (Exception ex)
                 {
                     IsFound = false;
-                    using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                    {
-                        writer.WriteLine("\t\t\t\tError isLicenseDetaind \n" + ex.Message);
-                    }
+                 clsEventLog.EventLogError(ex.Message);
                 }
                 return IsFound;
             
@@ -137,10 +128,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in GetDetainIDByLicenseID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -157,46 +145,43 @@ namespace DataAccessLayer
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("DetainID", DetainID);
 
-                try
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
                 {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        isFound = true;
-                        LicenseID = (int)reader["LicenseID"];
-                        DetainDate = (DateTime)reader["DetainDate"];
-                        FineFees = (decimal)reader["FineFees"];
-                        CreatedByUserID = (int)reader["CreatedByUserID"];
+                    isFound = true;
+                    LicenseID = (int)reader["LicenseID"];
+                    DetainDate = (DateTime)reader["DetainDate"];
+                    FineFees = (decimal)reader["FineFees"];
+                    CreatedByUserID = (int)reader["CreatedByUserID"];
 
-                        IsRelease =(bool)reader["IsReleased"];
-                        ReleaseDate =( reader["ReleaseDate"]==DBNull.Value) ?DateTime.MaxValue:(DateTime)reader["ReleaseDate"];
-                        ReleaseByUserID = reader["ReleasedByUserID"]==DBNull.Value? -1:(int)reader["ReleaseByUserID"];
-                        ReleaseApplicationID = reader["ReleaseApplicationID"]==DBNull.Value? -1 : (int)reader["ReleaseApplicationID"];
+                    IsRelease = (bool)reader["IsReleased"];
+                    ReleaseDate = (reader["ReleaseDate"] == DBNull.Value) ? DateTime.MaxValue : (DateTime)reader["ReleaseDate"];
+                    ReleaseByUserID = reader["ReleasedByUserID"] == DBNull.Value ? -1 : (int)reader["ReleaseByUserID"];
+                    ReleaseApplicationID = reader["ReleaseApplicationID"] == DBNull.Value ? -1 : (int)reader["ReleaseApplicationID"];
 
 
-                        
 
-                    }
-                    else
-                    {
-                        isFound = false;
-                    }
-                    reader.Close();
 
                 }
-                catch (Exception ex)
+                else
                 {
                     isFound = false;
-                    using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                    {
-                        writer.WriteLine(" \t\t\t\tError in GetAllInfoByID \n" + ex.Message);
-                    }
                 }
-                finally
-                {
-                    connection.Close();
-                }
+                reader.Close();
+
+            }
+            catch (Exception ex)
+            {
+                isFound = false;
+                clsEventLog.EventLogError(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
                 return isFound;
             
 
@@ -227,10 +212,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError ReleaseDetainLicense \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
