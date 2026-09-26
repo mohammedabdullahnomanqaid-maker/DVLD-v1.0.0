@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BussinseLayer;
 using System.IO;
+using clsBussinseLayer ;
 
 namespace Course19
 {
@@ -33,9 +34,9 @@ namespace Course19
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            clsUsers _User = clsUsers.FindUserInfoByUsernameAndPassword(tbUserName.Text.Trim(), tbPassword.Text.Trim());
+            clsUsers _User = clsUsers.FindUserInfoByUsernameAndPassword(tbUserName.Text.Trim(), clsHashing.ComputeHash(tbPassword.Text.Trim()));
 
-            if(_User!=null)
+            if (_User != null)
             {
                 if (chkRemeberMe.Checked)
                 {
