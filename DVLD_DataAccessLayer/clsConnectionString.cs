@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace DataAccessLayer
 {
    static class clsConnection
     {
-       static public string ConnectionString = "Server=.;DataBase=DVLD;User=sa;Password=123456;";
-        static public string FileName = "Log_DVLD_Errors";
+       static public string ConnectionString =ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString ;
     }
 
 }
