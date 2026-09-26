@@ -30,10 +30,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t Error in GetAllApplications \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -67,10 +64,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError in AddNewLocalDrivingLicenseApplication \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -103,11 +97,8 @@ namespace DataAccessLayer
                 catch (Exception ex)
                 {
                     IsFound = false;
-                    using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                    {
-                        writer.WriteLine("\t\t\t\tError IsLocalDrivingLicenseApplicationExistByPersonIDAndLicenseClassID \n" + ex.Message);
-                    }
-                }
+                clsEventLog.EventLogError(ex.Message);
+            }
                 return IsFound;
             }
 
@@ -142,10 +133,7 @@ namespace DataAccessLayer
             catch(Exception ex)
             {
                 IsFound = false;
-                using(StreamWriter writer=new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in GetLocalDrivingLicenseApplicationByID\n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -177,10 +165,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in UpdatLocalDrivingLicenseApplication \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -207,10 +192,7 @@ namespace DataAccessLayer
                 }
                 catch (Exception ex)
                 {
-                    using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                    {
-                        writer.WriteLine("\t\t\tError in DeleteLocalDrivingLicenseApplication \n" + ex.Message);
-                    }
+                clsEventLog.EventLogError(ex.Message);
                 }
                 finally
                 {
@@ -252,10 +234,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 IsFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in GetLocalDrivingLicenseApplicationByID\n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
