@@ -29,10 +29,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t Error in GetAllInternationalLicense \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -59,10 +56,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t Error in GetAllInternationalLicenseByDriverID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -106,10 +100,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError in AddNewInterNationalLicense \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -157,10 +148,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 isFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine(" \t\t\t\tError in GetInternationalLicenseInfoByInternationalID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -257,11 +245,8 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-             
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError DoesHaveInternationalLicense \n" + ex.Message);
-                }
+
+                clsEventLog.EventLogError(ex.Message);
             }
             return InternationalLicenseID;
         }
