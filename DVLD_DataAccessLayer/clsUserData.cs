@@ -32,10 +32,7 @@ namespace DataAccessLayer
             }
             catch(Exception ex)
             {
-                using(StreamWriter writer =new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t Error in GetAllUsers \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -74,10 +71,7 @@ namespace DataAccessLayer
             }
             catch(Exception ex)
             {
-                using(StreamWriter writer=new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError in AddNewUser \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -105,10 +99,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 IsFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError is Person exist \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             return IsFound;
         }
@@ -130,10 +121,7 @@ namespace DataAccessLayer
             }
             catch(Exception ex)
             {
-                using (StreamWriter writer =new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError in IsUserNameExist \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -175,10 +163,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 isFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine(" \t\t\t\tError in GetUserInfoByPersonID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -220,10 +205,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 isFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine(" \t\t\t\tError in GetUserInfoByUserID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -255,10 +237,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in Update Users \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -284,10 +263,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in Delete User \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -333,10 +309,7 @@ namespace DataAccessLayer
             catch(Exception ex)
             {
                 IsFound = false;
-                using(StreamWriter writer=new StreamWriter(clsConnection.ConnectionString))
-                {
-                    writer.WriteLine("\t\t\tError in GetUserInfoByUsernameAndPassword\n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -363,10 +336,7 @@ namespace DataAccessLayer
             }
             catch(Exception ex)
             {
-                using(StreamWriter writer=new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\t Error in Update Password \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
