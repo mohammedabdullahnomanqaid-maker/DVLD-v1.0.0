@@ -39,10 +39,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in Update Test \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -82,10 +79,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError in AddNewTest \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -119,10 +113,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError in GetTestIDByAppointmentID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -162,10 +153,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 IsFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in GetTestInfoByID\n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -199,10 +187,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 IsFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError IsFaild \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             return IsFound;
         }
@@ -232,10 +217,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 IsFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError DoesAttendBefore \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             return IsFound;
         }
@@ -262,10 +244,7 @@ namespace DataAccessLayer
             }
             catch(Exception ex)
             {
-                using(StreamWriter writer=new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("Error in GetTestPassedCount \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
