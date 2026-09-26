@@ -29,7 +29,7 @@ namespace Course19
                 e.Cancel = true;
                 return;
             }
-            if (tbCurrentPassword.Text.Trim() != _User.Password)
+            if (clsHashing.ComputeHash(tbCurrentPassword.Text.Trim()) != _User.Password)
             {
                 errorProvider1.SetError(tbCurrentPassword, "Current Password is wrong!");
                 e.Cancel = true;
@@ -51,7 +51,7 @@ namespace Course19
 
         private void tbConfirmPassword_Validating(object sender, CancelEventArgs e)
         {
-            if (tbNewPassword.Text.Trim() != tbConfirmPassword.Text.Trim())
+            if (clsHashing.ComputeHash(tbNewPassword.Text.Trim()) !=clsHashing.ComputeHash(tbConfirmPassword.Text.Trim()))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(tbConfirmPassword, "Password Confirmation does not match passwrod !");
@@ -88,7 +88,7 @@ namespace Course19
                 MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            _User.Password = tbConfirmPassword.Text.Trim();
+            _User.Password =clsHashing.ComputeHash(tbConfirmPassword.Text.Trim());
             if (_User.Save())
             {
                 MessageBox.Show("Password Changed Successfully.", "Change Password", MessageBoxButtons.OK, MessageBoxIcon.Information);

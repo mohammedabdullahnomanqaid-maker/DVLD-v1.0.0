@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 
 
-namespace clsBussinseLayer
+namespace BussinseLayer
 {
    static public class clsHashing
     {

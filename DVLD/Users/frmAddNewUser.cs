@@ -47,7 +47,7 @@ namespace Course19
             }
 
             _User.UserName = tbUserName.Text.Trim();
-            _User.Password = tbPassword.Text.Trim();
+            _User.Password =clsHashing.ComputeHash(tbPassword.Text.Trim());
             _User.PersonID = uctSearchAndShowPersonCard1.PersonID;
             _User.IsActive = chkIsActive.Checked;
 
@@ -110,7 +110,7 @@ namespace Course19
 
         private void tbConfirmPassword_Validating_1(object sender, CancelEventArgs e)
         {
-            if (tbPassword.Text.Trim() != tbConfirmPassword.Text.Trim())
+            if (clsHashing.ComputeHash(tbPassword.Text.Trim()) !=clsHashing.ComputeHash(tbConfirmPassword.Text.Trim()))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(tbConfirmPassword, "Password Confirmation does not match passwrod !");
