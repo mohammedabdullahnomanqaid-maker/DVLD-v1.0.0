@@ -53,10 +53,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 isFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine(" \t\t\t\tError in GetLicenseInfoByLicenseID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -107,10 +104,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 isFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine(" \t\t\t\tError in GetLicenseInfoByDriverID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -144,10 +138,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine(" \t\t\t\tError in GetLicenseInfoOfHistoryByDriverID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -193,10 +184,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError in AddNewLicense \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -234,10 +222,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError in GetLicenseID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -262,10 +247,7 @@ namespace DataAccessLayer
             }
             catch(Exception ex)
             {
-                using (StreamWriter writer=new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("error in Make license in active "+ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -292,10 +274,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError in IsActiveLicense \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
