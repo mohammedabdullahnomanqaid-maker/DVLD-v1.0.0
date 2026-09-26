@@ -31,10 +31,7 @@ namespace DataAccessLayer
             }
             catch(Exception ex)
             {
-                using(StreamWriter writer=new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t Error in Gat All Application Types \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -62,10 +59,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t Error in GetApplicationTypeFees \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -103,10 +97,7 @@ namespace DataAccessLayer
             catch(Exception ex)
             {
                 isFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t Error in GetApplicationTypeByApplicationID\n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -137,10 +128,7 @@ namespace DataAccessLayer
             }
             catch(Exception ex)
             {
-                using(StreamWriter writer=new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\tError in Update Application Types \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
