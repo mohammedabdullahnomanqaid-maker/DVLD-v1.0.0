@@ -34,10 +34,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in clsPeople \n " + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -100,10 +97,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in Add New Person \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -163,10 +157,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in Update Person \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -230,10 +221,7 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 isFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine(" \t\t\t\tError in GetAllInfoByID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -298,10 +286,7 @@ ref string ThirdName, ref string LastName, ref int PersonID, ref DateTime DateOf
             catch (Exception ex)
             {
                 isFound = false;
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine(" \t\t\t\tError in GetAllInfoByNationalNo \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -328,10 +313,7 @@ ref string ThirdName, ref string LastName, ref int PersonID, ref DateTime DateOf
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in Delete Person \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -360,10 +342,7 @@ ref string ThirdName, ref string LastName, ref int PersonID, ref DateTime DateOf
             catch(Exception ex)
             {
                 IsFound = false;
-                using(StreamWriter writer=new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\t\tError is Person exist \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             return IsFound;
         }
@@ -394,10 +373,7 @@ ref string ThirdName, ref string LastName, ref int PersonID, ref DateTime DateOf
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in GetPersonIDByLocalDrivingLicenseApplicationID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
@@ -431,10 +407,7 @@ ref string ThirdName, ref string LastName, ref int PersonID, ref DateTime DateOf
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(clsConnection.FileName))
-                {
-                    writer.WriteLine("\t\t\tError in GetPersonIDByLicenseID \n" + ex.Message);
-                }
+                clsEventLog.EventLogError(ex.Message);
             }
             finally
             {
